@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
+            <connections>
+                <outlet property="randomQuestion" destination="waI-Vu-Sql" id="Vuc-X4-8z1"/>
+                <outlet property="rightButton" destination="Unl-ed-Kgb" id="f1D-kl-z0A"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unl-ed-Kgb">
+                    <rect key="frame" x="30" y="672" width="130" height="130"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="D54-GG-6k9"/>
+                        <constraint firstAttribute="width" constant="130" id="bH6-kE-dBD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="✓">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wH-cZ-z1j">
+                    <rect key="frame" x="254" y="672" width="130" height="130"/>
+                    <color key="backgroundColor" red="0.83470849280000003" green="0.23137254900000001" blue="0.26432911059999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="CGu-c9-rUk"/>
+                        <constraint firstAttribute="width" constant="130" id="hhi-6l-UI0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="wrongButton:" destination="-1" eventType="touchUpInside" id="kwB-3W-3rl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIVIA RANDOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUv-mf-sus">
+                    <rect key="frame" x="20" y="104" width="374" height="48"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Texto de prueba?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waI-Vu-Sql">
+                    <rect key="frame" x="20" y="402" width="374" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.87843137250000003" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="waI-Vu-Sql" firstAttribute="top" secondItem="qUv-mf-sus" secondAttribute="bottom" constant="250" id="3wF-Mh-eQs"/>
+                <constraint firstItem="qUv-mf-sus" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="4RC-IB-YYY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Unl-ed-Kgb" secondAttribute="bottom" constant="60" id="5F7-qs-Qqb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUv-mf-sus" secondAttribute="trailing" constant="20" id="Bvk-HO-z49"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="waI-Vu-Sql" secondAttribute="trailing" constant="20" id="CTi-qn-3HE"/>
+                <constraint firstItem="Unl-ed-Kgb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Gx0-FZ-qf4"/>
+                <constraint firstItem="waI-Vu-Sql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b7t-4V-jPT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8wH-cZ-z1j" secondAttribute="bottom" constant="60" id="g4k-mu-2Ou"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8wH-cZ-z1j" secondAttribute="trailing" constant="30" id="mz1-mM-MC6"/>
+                <constraint firstItem="qUv-mf-sus" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ysm-MP-JQ6"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
