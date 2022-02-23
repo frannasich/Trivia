@@ -13,7 +13,8 @@
 		A1870ECB27C4633A00939249 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECA27C4633A00939249 /* CategoriesService.swift */; };
 		A1870ECD27C4640900939249 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */; };
 		A1870ECF27C4778F00939249 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */; };
-		A1ABA42A27C00D3C00445810 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA42827C00D3C00445810 /* QuestionViewController.swift */; };
+		A1870ED127C6C34200939249 /* QuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ED027C6C34200939249 /* QuestionsService.swift */; };
+		A1ABA42A27C00D3C00445810 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA42827C00D3C00445810 /* QuestionsViewController.swift */; };
 		A1ABA42B27C00D3C00445810 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ABA42927C00D3C00445810 /* QuestionViewController.xib */; };
 		A1ABA43327C03F4B00445810 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA43227C03F4B00445810 /* TabBarController.swift */; };
 		A1ABA43627C044FB00445810 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA43427C044FB00445810 /* AboutViewController.swift */; };
@@ -38,7 +39,8 @@
 		A1870ECA27C4633A00939249 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
-		A1ABA42827C00D3C00445810 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		A1870ED027C6C34200939249 /* QuestionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsService.swift; sourceTree = "<group>"; };
+		A1ABA42827C00D3C00445810 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		A1ABA42927C00D3C00445810 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 		A1ABA43227C03F4B00445810 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A1ABA43427C044FB00445810 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -111,9 +113,10 @@
 				A1870ECA27C4633A00939249 /* CategoriesService.swift */,
 				A1870EC827C434E400939249 /* CategoriesViewModel.swift */,
 				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
+				A1870ED027C6C34200939249 /* QuestionsService.swift */,
 				A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */,
 				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
-				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
+				A1ABA42827C00D3C00445810 /* QuestionsViewController.swift */,
 				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
 				A1ABA43227C03F4B00445810 /* TabBarController.swift */,
 				A1E3972927BEAD20005EA451 /* ViewController.swift */,
@@ -245,8 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1870ED127C6C34200939249 /* QuestionsService.swift in Sources */,
 				A1E3972A27BEAD20005EA451 /* ViewController.swift in Sources */,
-				A1ABA42A27C00D3C00445810 /* QuestionViewController.swift in Sources */,
+				A1ABA42A27C00D3C00445810 /* QuestionsViewController.swift in Sources */,
 				A1870ECF27C4778F00939249 /* QuestionsViewModel.swift in Sources */,
 				A1E3972627BEAD20005EA451 /* AppDelegate.swift in Sources */,
 				A1ABA43327C03F4B00445810 /* TabBarController.swift in Sources */,

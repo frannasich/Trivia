@@ -4,7 +4,7 @@ import Foundation
 import Alamofire
  
 class CategoriesService {
-    private struct Categories: Codable {
+    private struct Categories: Decodable{
         let trivia_categories: [Category]
     }
     

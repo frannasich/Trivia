@@ -3,16 +3,15 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
-    
     private var viewModel: CategoriesViewModel!
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var categories = ["Primer Categoría","Segunda Categoría"]
+    private var categories = [Category]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = CategoriesViewController(service: CategoriesService())
+        self.viewModel = CategoriesViewModel(service: CategoriesService())
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
