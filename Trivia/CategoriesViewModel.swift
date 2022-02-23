@@ -4,7 +4,7 @@ import Foundation
 
 class CategoriesViewModel{
     private let categoriesService: CategoriesService
-    private var categories = [Category]()
+    var categories = [Category]()
     
     init(service: CategoriesService){
         self.categoriesService = service

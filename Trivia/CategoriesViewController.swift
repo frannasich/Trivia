@@ -46,7 +46,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
                 let cell = self.tableView.dequeueReusableCell(withIdentifier:
             "cell", for: indexPath)
             cell.textLabel?.text =
-                viewModel?.categories(indexPath.row,].name
+                viewModel?.categories(indexPath.row].name
             return cell
         }
         
