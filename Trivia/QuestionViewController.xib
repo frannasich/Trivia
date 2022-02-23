@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
             <connections>
-                <outlet property="randomQuestion" destination="waI-Vu-Sql" id="Vuc-X4-8z1"/>
-                <outlet property="rightButton" destination="Unl-ed-Kgb" id="f1D-kl-z0A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,43 +19,47 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unl-ed-Kgb">
-                    <rect key="frame" x="30" y="672" width="130" height="130"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="130" id="D54-GG-6k9"/>
-                        <constraint firstAttribute="width" constant="130" id="bH6-kE-dBD"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="✓">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wH-cZ-z1j">
-                    <rect key="frame" x="254" y="672" width="130" height="130"/>
-                    <color key="backgroundColor" red="0.83470849280000003" green="0.23137254900000001" blue="0.26432911059999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="130" id="CGu-c9-rUk"/>
-                        <constraint firstAttribute="width" constant="130" id="hhi-6l-UI0"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="X">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="wrongButton:" destination="-1" eventType="touchUpInside" id="kwB-3W-3rl"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIVIA RANDOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUv-mf-sus">
-                    <rect key="frame" x="20" y="104" width="374" height="48"/>
+                    <rect key="frame" x="20" y="84" width="374" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVt-Jk-AP6">
+                    <rect key="frame" x="20" y="672" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="kT2-YG-yc0"/>
+                        <constraint firstAttribute="width" constant="150" id="ybF-Tr-t2h"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="55" maxY="0.0"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="systemGreenColor"/>
+                        <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="plain" title="">
+                        <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="bold">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                        </preferredSymbolConfiguration>
+                        <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6K-OL-Tn9">
+                    <rect key="frame" x="244" y="672" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="MqH-xs-ezj"/>
+                        <constraint firstAttribute="width" constant="150" id="NKT-ZX-Lx6"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                        </preferredSymbolConfiguration>
+                        <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                    </buttonConfiguration>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Texto de prueba?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waI-Vu-Sql">
-                    <rect key="frame" x="20" y="402" width="374" height="38.5"/>
+                    <rect key="frame" x="20" y="362" width="374" height="38.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -65,23 +68,28 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.87843137250000003" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="waI-Vu-Sql" firstAttribute="top" secondItem="qUv-mf-sus" secondAttribute="bottom" constant="250" id="3wF-Mh-eQs"/>
-                <constraint firstItem="qUv-mf-sus" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="4RC-IB-YYY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Unl-ed-Kgb" secondAttribute="bottom" constant="60" id="5F7-qs-Qqb"/>
+                <constraint firstItem="waI-Vu-Sql" firstAttribute="top" secondItem="qUv-mf-sus" secondAttribute="bottom" constant="230" id="0Z0-qM-LQ9"/>
+                <constraint firstItem="qUv-mf-sus" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="4RC-IB-YYY"/>
+                <constraint firstAttribute="trailing" secondItem="A6K-OL-Tn9" secondAttribute="trailing" constant="20" id="7Ii-rG-a3a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUv-mf-sus" secondAttribute="trailing" constant="20" id="Bvk-HO-z49"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="waI-Vu-Sql" secondAttribute="trailing" constant="20" id="CTi-qn-3HE"/>
-                <constraint firstItem="Unl-ed-Kgb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Gx0-FZ-qf4"/>
                 <constraint firstItem="waI-Vu-Sql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b7t-4V-jPT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8wH-cZ-z1j" secondAttribute="bottom" constant="60" id="g4k-mu-2Ou"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8wH-cZ-z1j" secondAttribute="trailing" constant="30" id="mz1-mM-MC6"/>
+                <constraint firstItem="lVt-Jk-AP6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jBm-uk-8mD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="A6K-OL-Tn9" secondAttribute="bottom" constant="40" id="k7b-Vd-GgR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lVt-Jk-AP6" secondAttribute="bottom" constant="40" id="kd9-xw-f7t"/>
                 <constraint firstItem="qUv-mf-sus" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ysm-MP-JQ6"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
         </view>
     </objects>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,14 +10,13 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
     }
     
+
     @IBAction func startTrivia(_ sender: Any) {
-        if textField.hasText{
-            let vc = QuestionViewController (nibName: "QuestionViewController", bundle: nil)
-            self.present(vc, animated: true)
+        if let userName = textField.text, !userName.isEmpty {
+            presentTabBarController()
         } else {
                 presentNoUserNameAlert()
-        }
-    }
+        }    }
     
     @IBAction func aboutTrivia(_ sender: Any) {
         let about = AboutViewController(nibName: "AboutViewController", bundle: nil)
@@ -29,4 +28,10 @@ class InitialViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func presentTabBarController() {
+         let tabBarController = TabBarController()
+         tabBarController.modalPresentationStyle = .overFullScreen
+         self.present(tabBarController, animated: true)
+     }
 }

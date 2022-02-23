@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A15E41D627C2CB6E00EFD257 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */; };
+		A15E41D727C2CB6E00EFD257 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */; };
+		A1870EC927C434E400939249 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870EC827C434E400939249 /* CategoriesViewModel.swift */; };
+		A1870ECB27C4633A00939249 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECA27C4633A00939249 /* CategoriesService.swift */; };
+		A1870ECD27C4640900939249 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */; };
+		A1870ECF27C4778F00939249 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */; };
 		A1ABA42A27C00D3C00445810 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA42827C00D3C00445810 /* QuestionViewController.swift */; };
 		A1ABA42B27C00D3C00445810 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ABA42927C00D3C00445810 /* QuestionViewController.xib */; };
-		A1ABA42E27C03E3600445810 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA42C27C03E3600445810 /* CategoriesViewController.swift */; };
-		A1ABA42F27C03E3600445810 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ABA42D27C03E3600445810 /* CategoriesViewController.xib */; };
 		A1ABA43327C03F4B00445810 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA43227C03F4B00445810 /* TabBarController.swift */; };
 		A1ABA43627C044FB00445810 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABA43427C044FB00445810 /* AboutViewController.swift */; };
 		A1ABA43727C044FB00445810 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ABA43527C044FB00445810 /* AboutViewController.xib */; };
@@ -21,13 +25,21 @@
 		A1E3973227BEAD2F005EA451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */; };
 		A1E3973B27BEAE74005EA451 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E3973927BEAE74005EA451 /* InitialViewController.swift */; };
 		A1E3973C27BEAE74005EA451 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E3973A27BEAE74005EA451 /* InitialViewController.xib */; };
+		F37141EB338572C02B23A166 /* Pods_Trivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD264754F4A4998CF9544B9 /* Pods_Trivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D93DD96652E8644881E00A2 /* Pods-Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.release.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.release.xcconfig"; sourceTree = "<group>"; };
+		6DD264754F4A4998CF9544B9 /* Pods_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B58EA742D0B4811F1410588 /* Pods-Trivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.debug.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.debug.xcconfig"; sourceTree = "<group>"; };
+		A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		A1870EC827C434E400939249 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		A1870ECA27C4633A00939249 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
+		A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
 		A1ABA42827C00D3C00445810 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		A1ABA42927C00D3C00445810 /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
-		A1ABA42C27C03E3600445810 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		A1ABA42D27C03E3600445810 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		A1ABA43227C03F4B00445810 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A1ABA43427C044FB00445810 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A1ABA43527C044FB00445810 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -47,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37141EB338572C02B23A166 /* Pods_Trivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1270F2849CCB6F6382C4F092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DD264754F4A4998CF9544B9 /* Pods_Trivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C4FE1F15EE7DB9190CB513F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B58EA742D0B4811F1410588 /* Pods-Trivia.debug.xcconfig */,
+				0D93DD96652E8644881E00A2 /* Pods-Trivia.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1E3971927BEAD20005EA451 = {
 			isa = PBXGroup;
 			children = (
 				A1E3972327BEAD20005EA451 /* Products */,
 				A1E3972427BEAD20005EA451 /* Trivia */,
+				8C4FE1F15EE7DB9190CB513F /* Pods */,
+				1270F2849CCB6F6382C4F092 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +107,11 @@
 				A1E3973327BEAD2F005EA451 /* Info.plist */,
 				A1ABA43427C044FB00445810 /* AboutViewController.swift */,
 				A1E3972527BEAD20005EA451 /* AppDelegate.swift */,
-				A1ABA42C27C03E3600445810 /* CategoriesViewController.swift */,
+				A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */,
+				A1870ECA27C4633A00939249 /* CategoriesService.swift */,
+				A1870EC827C434E400939249 /* CategoriesViewModel.swift */,
+				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
+				A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */,
 				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
 				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
 				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
@@ -83,7 +119,7 @@
 				A1E3972927BEAD20005EA451 /* ViewController.swift */,
 				A1E3972E27BEAD2F005EA451 /* Assets.xcassets */,
 				A1ABA43527C044FB00445810 /* AboutViewController.xib */,
-				A1ABA42D27C03E3600445810 /* CategoriesViewController.xib */,
+				A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */,
 				A1E3973A27BEAE74005EA451 /* InitialViewController.xib */,
 				A1ABA42927C00D3C00445810 /* QuestionViewController.xib */,
 				A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */,
@@ -98,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1E3973627BEAD2F005EA451 /* Build configuration list for PBXNativeTarget "Trivia" */;
 			buildPhases = (
+				1FF24B40B905DE11296FE890 /* [CP] Check Pods Manifest.lock */,
 				A1E3971E27BEAD20005EA451 /* Sources */,
 				A1E3971F27BEAD20005EA451 /* Frameworks */,
 				A1E3972027BEAD20005EA451 /* Resources */,
+				F542D99887FA4A621C73A121 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,7 +189,7 @@
 			files = (
 				A1E3973227BEAD2F005EA451 /* LaunchScreen.storyboard in Resources */,
 				A1E3972F27BEAD2F005EA451 /* Assets.xcassets in Resources */,
-				A1ABA42F27C03E3600445810 /* CategoriesViewController.xib in Resources */,
+				A15E41D727C2CB6E00EFD257 /* CategoriesViewController.xib in Resources */,
 				A1E3973C27BEAE74005EA451 /* InitialViewController.xib in Resources */,
 				A1ABA43727C044FB00445810 /* AboutViewController.xib in Resources */,
 				A1ABA42B27C00D3C00445810 /* QuestionViewController.xib in Resources */,
@@ -160,6 +198,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FF24B40B905DE11296FE890 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trivia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F542D99887FA4A621C73A121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trivia/Pods-Trivia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trivia/Pods-Trivia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trivia/Pods-Trivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1E3971E27BEAD20005EA451 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,11 +247,15 @@
 			files = (
 				A1E3972A27BEAD20005EA451 /* ViewController.swift in Sources */,
 				A1ABA42A27C00D3C00445810 /* QuestionViewController.swift in Sources */,
-				A1ABA42E27C03E3600445810 /* CategoriesViewController.swift in Sources */,
+				A1870ECF27C4778F00939249 /* QuestionsViewModel.swift in Sources */,
 				A1E3972627BEAD20005EA451 /* AppDelegate.swift in Sources */,
 				A1ABA43327C03F4B00445810 /* TabBarController.swift in Sources */,
 				A1E3972827BEAD20005EA451 /* SceneDelegate.swift in Sources */,
+				A1870ECB27C4633A00939249 /* CategoriesService.swift in Sources */,
+				A1870ECD27C4640900939249 /* AlamofireAPIClient.swift in Sources */,
 				A1ABA43627C044FB00445810 /* AboutViewController.swift in Sources */,
+				A15E41D627C2CB6E00EFD257 /* CategoriesViewController.swift in Sources */,
+				A1870EC927C434E400939249 /* CategoriesViewModel.swift in Sources */,
 				A1E3973B27BEAE74005EA451 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +392,7 @@
 		};
 		A1E3973727BEAD2F005EA451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B58EA742D0B4811F1410588 /* Pods-Trivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,6 +421,7 @@
 		};
 		A1E3973827BEAD2F005EA451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D93DD96652E8644881E00A2 /* Pods-Trivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-Alkemy.jpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMp-bt-yCI">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-Alkemy" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMp-bt-yCI">
                     <rect key="frame" x="125" y="104" width="164" height="149"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TMp-bt-yCI" secondAttribute="height" multiplier="1.1" id="leZ-hj-YYg"/>
@@ -41,21 +41,23 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kz-rq-NTm">
-                    <rect key="frame" x="40" y="774" width="334" height="38"/>
-                    <color key="backgroundColor" red="0.83470849277210879" green="0.23137254901960785" blue="0.2643291105504702" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Empezar">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-AK-IJo">
+                    <rect key="frame" x="40" y="772" width="334" height="40"/>
+                    <color key="backgroundColor" red="0.83470849280000003" green="0.23137254900000001" blue="0.26432911059999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="N46-Mt-Kw6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Empezar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
-                        <action selector="startTrivia:" destination="-1" eventType="touchUpInside" id="6Qo-oj-C4m"/>
+                        <action selector="startTrivia:" destination="-1" eventType="touchUpInside" id="OYX-aV-A7v"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJa-IP-KNs">
-                    <rect key="frame" x="373" y="81" width="21" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJa-IP-KNs">
+                    <rect key="frame" x="343" y="64" width="21" height="21"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -71,17 +73,19 @@
             <color key="backgroundColor" red="0.8784313725490196" green="0.96078431372549022" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="8fJ-h4-D1d" secondAttribute="trailing" constant="20" id="3K3-yF-cY0"/>
+                <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="fk8-AK-IJo" secondAttribute="trailing" constant="40" id="7FD-6w-gma"/>
                 <constraint firstItem="8fJ-h4-D1d" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="20" id="7uR-Pg-dmO"/>
                 <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="TMp-bt-yCI" secondAttribute="trailing" constant="125" id="DPV-71-qCZ"/>
                 <constraint firstItem="TMp-bt-yCI" firstAttribute="top" secondItem="Hpd-Vf-2iv" secondAttribute="top" constant="60" id="G2v-ya-wrM"/>
-                <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="8Kz-rq-NTm" secondAttribute="trailing" constant="40" id="HBO-eF-yFT"/>
                 <constraint firstItem="PxD-Td-6Kt" firstAttribute="top" secondItem="cQh-mn-da8" secondAttribute="bottom" constant="50" id="Itr-De-W8S"/>
-                <constraint firstItem="8Kz-rq-NTm" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="40" id="O6H-XQ-j1Z"/>
+                <constraint firstItem="rJa-IP-KNs" firstAttribute="top" secondItem="Hpd-Vf-2iv" secondAttribute="top" constant="20" id="PPz-u4-sYL"/>
+                <constraint firstItem="fk8-AK-IJo" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="40" id="WIX-PI-aam"/>
+                <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="rJa-IP-KNs" secondAttribute="trailing" constant="50" id="X6W-sY-VGK"/>
                 <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="cQh-mn-da8" secondAttribute="trailing" constant="20" id="ed2-mZ-AHi"/>
                 <constraint firstItem="cQh-mn-da8" firstAttribute="top" secondItem="TMp-bt-yCI" secondAttribute="bottom" constant="40" id="edS-KZ-0wj"/>
-                <constraint firstItem="Hpd-Vf-2iv" firstAttribute="bottom" secondItem="8Kz-rq-NTm" secondAttribute="bottom" constant="50" id="elR-TZ-4xO"/>
                 <constraint firstItem="Hpd-Vf-2iv" firstAttribute="trailing" secondItem="PxD-Td-6Kt" secondAttribute="trailing" constant="20" id="fgy-9e-jz4"/>
                 <constraint firstItem="PxD-Td-6Kt" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="20" id="hdv-Rw-Opk"/>
+                <constraint firstItem="Hpd-Vf-2iv" firstAttribute="bottom" secondItem="fk8-AK-IJo" secondAttribute="bottom" constant="50" id="jNJ-8O-AXb"/>
                 <constraint firstItem="8fJ-h4-D1d" firstAttribute="top" secondItem="PxD-Td-6Kt" secondAttribute="bottom" constant="10" id="k6x-sd-erY"/>
                 <constraint firstItem="TMp-bt-yCI" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="125" id="mat-zr-Gkf"/>
                 <constraint firstItem="cQh-mn-da8" firstAttribute="leading" secondItem="Hpd-Vf-2iv" secondAttribute="leading" constant="20" id="rgO-cs-sX5"/>
@@ -90,6 +94,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo-Alkemy.jpg" width="453" height="453"/>
+        <image name="logo-Alkemy" width="453" height="453"/>
     </resources>
 </document>
