@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target">
             <connections>
+                <outlet property="questionLabel" destination="waI-Vu-Sql" id="qQ2-f1-wqV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,6 +44,9 @@
                         </preferredSymbolConfiguration>
                         <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="rightAnswer:" destination="-1" eventType="touchUpInside" id="Dpi-0U-9E6"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6K-OL-Tn9">
                     <rect key="frame" x="244" y="672" width="150" height="150"/>
@@ -57,6 +61,9 @@
                         </preferredSymbolConfiguration>
                         <color key="baseForegroundColor" systemColor="systemRedColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="wrongAnswer:" destination="-1" eventType="touchUpInside" id="Grv-zP-6iO"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Texto de prueba?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waI-Vu-Sql">
                     <rect key="frame" x="20" y="362" width="374" height="38.5"/>

@@ -20,6 +20,7 @@ class InitialViewController: UIViewController {
     
     @IBAction func aboutTrivia(_ sender: Any) {
         let about = AboutViewController(nibName: "AboutViewController", bundle: nil)
+        about.modalPresentationStyle = .overFullScreen
         self.present(about, animated: true)
     }
     

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A152EBD827C7F9A80070CD11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152EBD727C7F9A80070CD11 /* Category.swift */; };
+		A152EBDA27C7FA450070CD11 /* Category Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152EBD927C7FA450070CD11 /* Category Response.swift */; };
+		A152EBE127C7FBB90070CD11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152EBE027C7FBB90070CD11 /* Constants.swift */; };
+		A152EBE327C81EAA0070CD11 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152EBE227C81EAA0070CD11 /* Question.swift */; };
+		A152EBE527C821380070CD11 /* Question Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152EBE427C821380070CD11 /* Question Response.swift */; };
 		A15E41D627C2CB6E00EFD257 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */; };
 		A15E41D727C2CB6E00EFD257 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */; };
 		A1870EC927C434E400939249 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1870EC827C434E400939249 /* CategoriesViewModel.swift */; };
@@ -33,6 +38,11 @@
 		0D93DD96652E8644881E00A2 /* Pods-Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.release.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.release.xcconfig"; sourceTree = "<group>"; };
 		6DD264754F4A4998CF9544B9 /* Pods_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B58EA742D0B4811F1410588 /* Pods-Trivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.debug.xcconfig"; path = "Target Support Files/Pods-Trivia/Pods-Trivia.debug.xcconfig"; sourceTree = "<group>"; };
+		A152EBD727C7F9A80070CD11 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A152EBD927C7FA450070CD11 /* Category Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category Response.swift"; sourceTree = "<group>"; };
+		A152EBE027C7FBB90070CD11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A152EBE227C81EAA0070CD11 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A152EBE427C821380070CD11 /* Question Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question Response.swift"; sourceTree = "<group>"; };
 		A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		A1870EC827C434E400939249 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +95,94 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A152EBD227C7E36F0070CD11 /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				A152EBDB27C7FA950070CD11 /* Categories List */,
+			);
+			path = Moduls;
+			sourceTree = "<group>";
+		};
+		A152EBD327C7E37C0070CD11 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A152EBD427C7E3D90070CD11 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A152EBD627C7E3EE0070CD11 /* Models */,
+				A152EBD527C7E3E40070CD11 /* Networking */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A152EBD527C7E3E40070CD11 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A152EBD627C7E3EE0070CD11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A152EBD727C7F9A80070CD11 /* Category.swift */,
+				A152EBD927C7FA450070CD11 /* Category Response.swift */,
+				A152EBE027C7FBB90070CD11 /* Constants.swift */,
+				A152EBE227C81EAA0070CD11 /* Question.swift */,
+				A152EBE427C821380070CD11 /* Question Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A152EBDB27C7FA950070CD11 /* Categories List */ = {
+			isa = PBXGroup;
+			children = (
+				A152EBDC27C7FADE0070CD11 /* View */,
+				A152EBDD27C7FAE60070CD11 /* ViewModel */,
+				A152EBDE27C7FB050070CD11 /* Service */,
+			);
+			path = "Categories List";
+			sourceTree = "<group>";
+		};
+		A152EBDC27C7FADE0070CD11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
+				A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */,
+				A1ABA43427C044FB00445810 /* AboutViewController.swift */,
+				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
+				A1ABA43227C03F4B00445810 /* TabBarController.swift */,
+				A1ABA43527C044FB00445810 /* AboutViewController.xib */,
+				A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */,
+				A1E3973A27BEAE74005EA451 /* InitialViewController.xib */,
+				A1ABA42927C00D3C00445810 /* QuestionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A152EBDD27C7FAE60070CD11 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1870EC827C434E400939249 /* CategoriesViewModel.swift */,
+				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A152EBDE27C7FB050070CD11 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1870ECA27C4633A00939249 /* CategoriesService.swift */,
+				A1870ED027C6C34200939249 /* QuestionsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		A1E3971927BEAD20005EA451 = {
 			isa = PBXGroup;
 			children = (
@@ -106,25 +204,14 @@
 		A1E3972427BEAD20005EA451 /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				A152EBD427C7E3D90070CD11 /* Shared */,
+				A152EBD327C7E37C0070CD11 /* Utils */,
+				A152EBD227C7E36F0070CD11 /* Moduls */,
 				A1E3973327BEAD2F005EA451 /* Info.plist */,
-				A1ABA43427C044FB00445810 /* AboutViewController.swift */,
 				A1E3972527BEAD20005EA451 /* AppDelegate.swift */,
-				A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */,
-				A1870ECA27C4633A00939249 /* CategoriesService.swift */,
-				A1870EC827C434E400939249 /* CategoriesViewModel.swift */,
-				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
-				A1870ED027C6C34200939249 /* QuestionsService.swift */,
-				A1870ECC27C4640900939249 /* AlamofireAPIClient.swift */,
-				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
-				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
 				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
-				A1ABA43227C03F4B00445810 /* TabBarController.swift */,
 				A1E3972927BEAD20005EA451 /* ViewController.swift */,
 				A1E3972E27BEAD2F005EA451 /* Assets.xcassets */,
-				A1ABA43527C044FB00445810 /* AboutViewController.xib */,
-				A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */,
-				A1E3973A27BEAE74005EA451 /* InitialViewController.xib */,
-				A1ABA42927C00D3C00445810 /* QuestionViewController.xib */,
 				A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */,
 			);
 			path = Trivia;
@@ -251,16 +338,21 @@
 				A1870ED127C6C34200939249 /* QuestionsService.swift in Sources */,
 				A1E3972A27BEAD20005EA451 /* ViewController.swift in Sources */,
 				A1ABA42A27C00D3C00445810 /* QuestionViewController.swift in Sources */,
+				A152EBE327C81EAA0070CD11 /* Question.swift in Sources */,
 				A1870ECF27C4778F00939249 /* QuestionsViewModel.swift in Sources */,
 				A1E3972627BEAD20005EA451 /* AppDelegate.swift in Sources */,
 				A1ABA43327C03F4B00445810 /* TabBarController.swift in Sources */,
 				A1E3972827BEAD20005EA451 /* SceneDelegate.swift in Sources */,
+				A152EBE127C7FBB90070CD11 /* Constants.swift in Sources */,
 				A1870ECB27C4633A00939249 /* CategoriesService.swift in Sources */,
 				A1870ECD27C4640900939249 /* AlamofireAPIClient.swift in Sources */,
+				A152EBE527C821380070CD11 /* Question Response.swift in Sources */,
 				A1ABA43627C044FB00445810 /* AboutViewController.swift in Sources */,
 				A15E41D627C2CB6E00EFD257 /* CategoriesViewController.swift in Sources */,
+				A152EBDA27C7FA450070CD11 /* Category Response.swift in Sources */,
 				A1870EC927C434E400939249 /* CategoriesViewModel.swift in Sources */,
 				A1E3973B27BEAE74005EA451 /* InitialViewController.swift in Sources */,
+				A152EBD827C7F9A80070CD11 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
