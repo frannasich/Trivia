@@ -14,3 +14,9 @@ dos botones para seleccionar si la afirmación es verdadera o falsa.
        mostrará una alerta indicando la respuesta.
   * b. Luego de la respuesta de la opción seleccionada se mostrará una
        nueva afirmación.
+       
+## Desarrollo
+* Lenguaje: Swift
+* Patrón de Arquitectura: MVVM
+* API: [**Open Trivia**](https://opentdb.com/ "Open Trivia")
+* IDE: Xcode
