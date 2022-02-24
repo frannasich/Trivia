@@ -3,5 +3,10 @@
 import Foundation
 
 struct Question: Codable {
-var question: String
+    var category: String
+    var type: String
+    var difficulty: String
+    var question: String
+    var correct_answer: String
+    var incorrect_answers: [String]
 }

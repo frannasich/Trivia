@@ -5,19 +5,19 @@ import Foundation
 class QuestionsViewModel{
     private let questionsService: QuestionsService
     var questions = [Question]()
+    var questions_ : Question?
     var currentQuestionIndex = 0
 
         init(service: QuestionsService) {
             self.questionsService = service
         }
-    func getQuestions(for categoryID: Int?, completion: @escaping () -> Void) {
-        questionsService.getQuestions(for: categoryID) {
-            [weak self] questions in guard let strongSelf = self else {return}
-            
-            strongSelf.questions = questions
-            completion()
-         }
-     }
+    func getQuestion(for categoryID: Int, completion: @escaping () -> Void) {
+            questionsService.getQuestion(for: categoryID) { [weak self] receivedQuestion in
+                guard let strongSelf = self else { return }
+                strongSelf.questions_ = receivedQuestion
+                completion()
+            }
+        }
     
     func areQuestionsAvailable() -> Bool {
         !questions.isEmpty
@@ -55,8 +55,8 @@ class QuestionsViewModel{
         currentQuestionIndex >= questions.count
     }
     
-    func validateCurrentQuestion(answer: Bool) -> Bool {
-        questions[currentQuestionIndex].answer == answer
+    func validateCurrentQuestion(answer: String) -> Bool {
+        questions[currentQuestionIndex].correct_answer == answer
     }
 }
 
