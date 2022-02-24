@@ -14,7 +14,7 @@ class QuestionViewController: UIViewController {
      }
     
     private func getQuestions(){
-        viewModel.getQuestions(for: categoryID){ [weak self] in
+        viewModel.getQuestion(for: categoryID ?? 0){ [weak self] in
             guard let strongSelf = self else {return}
             
             if strongSelf.viewModel.areQuestionsAvailable() {
@@ -45,7 +45,7 @@ class QuestionViewController: UIViewController {
         questionLabel.text = question
     }
     
-    private func validateCurrentQuestion(answer: Bool) -> Bool {
+    private func validateCurrentQuestion(answer: String) -> Bool {
         viewModel.validateCurrentQuestion(answer: answer)
     }
     

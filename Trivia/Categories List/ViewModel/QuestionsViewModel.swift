@@ -55,8 +55,8 @@ class QuestionsViewModel{
         currentQuestionIndex >= questions.count
     }
     
-    func validateCurrentQuestion(answer: String) -> Bool {
-        questions[currentQuestionIndex].correct_answer == answer
+    func validateCurrentQuestion(answer: Bool) -> Bool {
+        questions[currentQuestionIndex].correct_answer = answer
     }
 }
 

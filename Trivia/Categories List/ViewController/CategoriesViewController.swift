@@ -3,9 +3,7 @@
 import UIKit
 
 protocol CategoriesDelegate {
-    func toogleLoading()
     func reloadTable()
-    func showError()
 }
 
 class CategoriesViewController: UIViewController {
@@ -36,19 +34,13 @@ class CategoriesViewController: UIViewController {
 }
 
 extension CategoriesViewController: CategoriesDelegate{
-    func toogleLoading() {
-        <#code#>
-    }
-    
+
     func reloadTable(){
             viewModel?.getCategories{
                 self.tableView.reloadData()
             }
         }
-    
-    func showError() {
-        <#code#>
-    }
+
 }
 
 extension CategoriesViewController: UITableViewDelegate {

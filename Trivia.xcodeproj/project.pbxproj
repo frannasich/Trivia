@@ -194,16 +194,24 @@
 		A1E3972427BEAD20005EA451 /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				A1E8B4B527C833CF00A84560 /* App */,
 				A152EBDB27C7FA950070CD11 /* Categories List */,
 				A152EBD427C7E3D90070CD11 /* Shared */,
+				A1E3972E27BEAD2F005EA451 /* Assets.xcassets */,
+			);
+			path = Trivia;
+			sourceTree = "<group>";
+		};
+		A1E8B4B527C833CF00A84560 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				A1E3972527BEAD20005EA451 /* AppDelegate.swift */,
 				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
 				A1E3972927BEAD20005EA451 /* ViewController.swift */,
 				A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */,
-				A1E3972E27BEAD2F005EA451 /* Assets.xcassets */,
 				A1E3973327BEAD2F005EA451 /* Info.plist */,
 			);
-			path = Trivia;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
