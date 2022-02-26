@@ -11,6 +11,8 @@ class AboutViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         let initialView = InitialViewController(nibName: "InitialViewController", bundle: nil)
+        initialView.modalPresentationStyle = .overFullScreen
+        initialView.modalTransitionStyle = .crossDissolve
         self.present(initialView, animated: true)
     }
 }

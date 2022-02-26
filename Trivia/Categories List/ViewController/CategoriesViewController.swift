@@ -4,6 +4,7 @@ import UIKit
 
 protocol CategoriesDelegate {
     func reloadTable()
+    func showError()
 }
 
 class CategoriesViewController: UIViewController {
@@ -15,7 +16,7 @@ class CategoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = CategoriesViewModel(service: self.service, delegate: CategoriesDelegate.self as! CategoriesDelegate)
+        self.viewModel = CategoriesViewModel(service: service, delegate: self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -40,6 +41,9 @@ extension CategoriesViewController: CategoriesDelegate{
                 self.tableView.reloadData()
             }
         }
+    func showError() {
+        print("Ha ocurrido un error")
+    }
 
 }
 

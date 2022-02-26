@@ -6,7 +6,7 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     private var viewModel: QuestionsViewModel!
-    var categoryID: Int?
+    var categoryID = 0
 
      override func viewDidLoad() {
          viewModel = QuestionsViewModel(service: QuestionsService())
@@ -14,7 +14,7 @@ class QuestionViewController: UIViewController {
      }
     
     private func getQuestions(){
-        viewModel.getQuestion(for: categoryID ?? 0){ [weak self] in
+        viewModel.getQuestion(for: categoryID){ [weak self] in
             guard let strongSelf = self else {return}
             
             if strongSelf.viewModel.areQuestionsAvailable() {
@@ -24,13 +24,15 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func wrongAnswer(_ sender: UIButton){
-        let result = validateCurrentQuestion(answer: false)
-        sendResultMessage(for: result)
+        if let result = validateCurrentQuestion(answer: "False"){
+            sendResultMessage(for: result)
+        }
     }
     
     @IBAction func rightAnswer(_ sender: UIButton){
-        let result = validateCurrentQuestion(answer: true)
+        if let result = validateCurrentQuestion(answer: "true"){
         sendResultMessage(for: result)
+        }
     }
     
     private func updateQuestion(){
@@ -45,7 +47,7 @@ class QuestionViewController: UIViewController {
         questionLabel.text = question
     }
     
-    private func validateCurrentQuestion(answer: String) -> Bool {
+    private func validateCurrentQuestion(answer: String) -> Bool? {
         viewModel.validateCurrentQuestion(answer: answer)
     }
     
