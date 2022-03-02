@@ -22,6 +22,8 @@ class TabBarController: UITabBarController {
         
         let firstTabNavigationController = UINavigationController(rootViewController: firstTabViewController)
         firstTabNavigationController.tabBarItem = UITabBarItem(title: firstTabTitle, image: firstTabImage, selectedImage: nil)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for:.selected)
+        UITabBar.appearance().tintColor = UIColor.red
             
         // Random
         let secondTabViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
