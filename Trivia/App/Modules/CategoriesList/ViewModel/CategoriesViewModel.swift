@@ -11,8 +11,10 @@ class CategoriesViewModel{
         self.categoriesService = service
         self.delegate = delegate
     }
-    func getCategories(completion: @escaping () -> Void ){
+    
+    func getCategories(){
         categoriesService.getCategories{categories in
+            self.delegate.toogleLoad()
             self.categories = categories
             self.delegate.reloadTable()
         } onError: {
@@ -20,10 +22,10 @@ class CategoriesViewModel{
         }
     }
     
-    func getCategory(at index: Int) -> Category{
+    func getCategory(at index: Int) -> Category {
         categories[index]
     }
-    func getCategoriesCount() -> Int{
+    func getCategoriesCount() -> Int {
         categories.count
     }
 }

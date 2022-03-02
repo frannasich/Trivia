@@ -1,28 +1,29 @@
 //  CategoriesService.swift
 
 import Foundation
-import Alamofire
  
 class CategoriesService {
-
-    let apiClient = AlamofireAPIClient()
     
-    func getCategories(completion: @escaping ([Category]) -> Void, onError: @escaping () -> Void ) {
-        apiClient.get(url: Constants().categoriesURL) { response in
+    func getCategories(onComplete: @escaping ([Category]) -> Void, onError: @escaping () -> Void ) {
+        AlamofireAPIClient.shared.get(url: Constants().categoriesURL) { response in
             switch response {
             case .success(let data):
                 do {
                     if let data = data {
-                        let categories = try JSONDecoder().decode(Categories.self, from: data)
-                        completion(categories.trivia_categories)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let categoriesResponse = try decoder.decode(Categories.self, from: data)
+                    print(categoriesResponse.trivia_categories)
+                    onComplete(categoriesResponse.trivia_categories)
                     } else {
                         onError()
                     }
                 } catch {
-                    completion([])
+                    onError()
+                    print(error)
                 }
             case .failure(_):
-                completion([])
+                onError()
             }
         }
     }

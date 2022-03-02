@@ -3,6 +3,6 @@
 import Foundation
 
 struct Category: Codable {
-    var id: Int
-    var name: String
+    let id: Int
+    let name: String
 }
