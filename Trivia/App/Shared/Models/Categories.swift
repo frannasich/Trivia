@@ -8,5 +8,5 @@
 import Foundation
 
 struct Categories: Codable {
-    let trivia_categories: [Category]
+    let triviaCategories: [Category]
 }

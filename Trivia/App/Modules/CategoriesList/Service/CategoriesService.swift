@@ -13,8 +13,8 @@ class CategoriesService {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let categoriesResponse = try decoder.decode(Categories.self, from: data)
-                    print(categoriesResponse.trivia_categories)
-                    onComplete(categoriesResponse.trivia_categories)
+                    print(categoriesResponse.triviaCategories)
+                    onComplete(categoriesResponse.triviaCategories)
                     } else {
                         onError()
                     }

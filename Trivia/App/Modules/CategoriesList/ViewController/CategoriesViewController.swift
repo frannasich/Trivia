@@ -18,6 +18,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = CategoriesViewModel(service: service, delegate: self)
+        self.viewModel?.getCategories()
         setupView()
       }
     
