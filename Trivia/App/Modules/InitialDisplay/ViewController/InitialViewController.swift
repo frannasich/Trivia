@@ -19,9 +19,8 @@ class InitialViewController: UIViewController {
         }    }
     
     @IBAction func aboutTrivia(_ sender: Any) {
-        let about = AboutViewController(nibName: "AboutViewController", bundle: nil)
-        about.modalPresentationStyle = .overFullScreen
-        self.present(about, animated: true)
+        let about = AboutViewController()
+        self.navigationController?.pushViewController(about, animated: true)
     }
     
     private func presentNoUserNameAlert(){
@@ -32,7 +31,6 @@ class InitialViewController: UIViewController {
     
     private func presentTabBarController() {
          let tabBarController = TabBarController()
-         tabBarController.modalPresentationStyle = .overFullScreen
-         self.present(tabBarController, animated: true)
+        self.navigationController?.pushViewController(tabBarController, animated: true)
      }
 }

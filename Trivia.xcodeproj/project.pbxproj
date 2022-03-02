@@ -93,6 +93,119 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A11DE19E27CFE49E00570AD8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A11DE1AA27CFE62E00570AD8 /* TabBar */,
+				A11DE1A227CFE54F00570AD8 /* About */,
+				A11DE19F27CFE4D400570AD8 /* InitialDisplay */,
+				A152EBDB27C7FA950070CD11 /* CategoriesList */,
+				A11DE1A527CFE57F00570AD8 /* Questions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A11DE19F27CFE4D400570AD8 /* InitialDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				A11DE1A127CFE53C00570AD8 /* View */,
+				A11DE1A027CFE52E00570AD8 /* ViewController */,
+			);
+			path = InitialDisplay;
+			sourceTree = "<group>";
+		};
+		A11DE1A027CFE52E00570AD8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A11DE1A127CFE53C00570AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1E3973A27BEAE74005EA451 /* InitialViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A11DE1A227CFE54F00570AD8 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A11DE1A427CFE56800570AD8 /* View */,
+				A11DE1A327CFE55F00570AD8 /* ViewController */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		A11DE1A327CFE55F00570AD8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1ABA43427C044FB00445810 /* AboutViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A11DE1A427CFE56800570AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1ABA43527C044FB00445810 /* AboutViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A11DE1A527CFE57F00570AD8 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				A11DE1A927CFE5A400570AD8 /* View */,
+				A11DE1A827CFE59F00570AD8 /* ViewController */,
+				A11DE1A727CFE59800570AD8 /* ViewModel */,
+				A11DE1A627CFE59200570AD8 /* Service */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		A11DE1A627CFE59200570AD8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1870ED027C6C34200939249 /* QuestionsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A11DE1A727CFE59800570AD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A11DE1A827CFE59F00570AD8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A11DE1A927CFE5A400570AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1ABA42927C00D3C00445810 /* QuestionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A11DE1AA27CFE62E00570AD8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A1ABA43227C03F4B00445810 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		A152EBD427C7E3D90070CD11 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +234,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A152EBDB27C7FA950070CD11 /* Categories List */ = {
+		A152EBDB27C7FA950070CD11 /* CategoriesList */ = {
 			isa = PBXGroup;
 			children = (
 				A152EBE627C82C3D0070CD11 /* ViewController */,
@@ -129,16 +242,13 @@
 				A152EBDD27C7FAE60070CD11 /* ViewModel */,
 				A152EBDE27C7FB050070CD11 /* Service */,
 			);
-			path = "Categories List";
+			path = CategoriesList;
 			sourceTree = "<group>";
 		};
 		A152EBDC27C7FADE0070CD11 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1ABA43527C044FB00445810 /* AboutViewController.xib */,
 				A15E41D527C2CB6E00EFD257 /* CategoriesViewController.xib */,
-				A1E3973A27BEAE74005EA451 /* InitialViewController.xib */,
-				A1ABA42927C00D3C00445810 /* QuestionViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				A1870EC827C434E400939249 /* CategoriesViewModel.swift */,
-				A1870ECE27C4778F00939249 /* QuestionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				A1870ECA27C4633A00939249 /* CategoriesService.swift */,
-				A1870ED027C6C34200939249 /* QuestionsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -164,11 +272,7 @@
 		A152EBE627C82C3D0070CD11 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A1E3973927BEAE74005EA451 /* InitialViewController.swift */,
 				A15E41D427C2CB6E00EFD257 /* CategoriesViewController.swift */,
-				A1ABA43427C044FB00445810 /* AboutViewController.swift */,
-				A1ABA42827C00D3C00445810 /* QuestionViewController.swift */,
-				A1ABA43227C03F4B00445810 /* TabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -195,9 +299,12 @@
 			isa = PBXGroup;
 			children = (
 				A1E8B4B527C833CF00A84560 /* App */,
-				A152EBDB27C7FA950070CD11 /* Categories List */,
-				A152EBD427C7E3D90070CD11 /* Shared */,
+				A1E3972527BEAD20005EA451 /* AppDelegate.swift */,
+				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
+				A1E3972927BEAD20005EA451 /* ViewController.swift */,
+				A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */,
 				A1E3972E27BEAD2F005EA451 /* Assets.xcassets */,
+				A1E3973327BEAD2F005EA451 /* Info.plist */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -205,11 +312,8 @@
 		A1E8B4B527C833CF00A84560 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A1E3972527BEAD20005EA451 /* AppDelegate.swift */,
-				A1E3972727BEAD20005EA451 /* SceneDelegate.swift */,
-				A1E3972927BEAD20005EA451 /* ViewController.swift */,
-				A1E3973027BEAD2F005EA451 /* LaunchScreen.storyboard */,
-				A1E3973327BEAD2F005EA451 /* Info.plist */,
+				A152EBD427C7E3D90070CD11 /* Shared */,
+				A11DE19E27CFE49E00570AD8 /* Modules */,
 			);
 			path = App;
 			sourceTree = "<group>";

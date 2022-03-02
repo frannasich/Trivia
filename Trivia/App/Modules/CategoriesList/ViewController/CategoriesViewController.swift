@@ -20,7 +20,6 @@ class CategoriesViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        reloadTable()
       }
     
     func showQuestions(for category: Category){
