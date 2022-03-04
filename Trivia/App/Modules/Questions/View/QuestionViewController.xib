@@ -45,7 +45,7 @@
                         <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="rightAnswer:" destination="-1" eventType="touchUpInside" id="Dpi-0U-9E6"/>
+                        <action selector="yesButtonTapped:" destination="-1" eventType="touchUpInside" id="GmR-my-Ei6"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6K-OL-Tn9">
@@ -62,11 +62,11 @@
                         <color key="baseForegroundColor" systemColor="systemRedColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="wrongAnswer:" destination="-1" eventType="touchUpInside" id="Grv-zP-6iO"/>
+                        <action selector="noButtonTapped:" destination="-1" eventType="touchUpInside" id="8eC-i6-9gQ"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waI-Vu-Sql">
-                    <rect key="frame" x="20" y="362" width="374" height="29"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waI-Vu-Sql">
+                    <rect key="frame" x="20" y="212" width="374" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.87843137250000003" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="waI-Vu-Sql" firstAttribute="top" secondItem="qUv-mf-sus" secondAttribute="bottom" constant="230" id="0Z0-qM-LQ9"/>
+                <constraint firstItem="waI-Vu-Sql" firstAttribute="top" secondItem="qUv-mf-sus" secondAttribute="bottom" constant="80" id="0Z0-qM-LQ9"/>
                 <constraint firstItem="qUv-mf-sus" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="4RC-IB-YYY"/>
                 <constraint firstAttribute="trailing" secondItem="A6K-OL-Tn9" secondAttribute="trailing" constant="20" id="7Ii-rG-a3a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUv-mf-sus" secondAttribute="trailing" constant="20" id="Bvk-HO-z49"/>

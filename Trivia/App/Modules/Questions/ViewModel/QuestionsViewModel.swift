@@ -4,62 +4,44 @@ import Foundation
 
 class QuestionsViewModel{
     private let questionsService: QuestionsService
-    var questions = [Question]()
-    var questions_ : Question?
-    var currentQuestionIndex = 0
-
+        private var currentQuestion: Question?
+        
         init(service: QuestionsService) {
             self.questionsService = service
         }
-    func getQuestion(for categoryID: Int, completion: @escaping () -> Void) {
+        
+        func getQuestion(for categoryID: Int, completion: @escaping () -> Void) {
             questionsService.getQuestion(for: categoryID) { [weak self] receivedQuestion in
                 guard let strongSelf = self else { return }
-                strongSelf.questions_ = receivedQuestion
+                strongSelf.currentQuestion = receivedQuestion
                 completion()
             }
         }
-    
-    func areQuestionsAvailable() -> Bool {
-        !questions.isEmpty
-    }
-    
-    func questionsCount() -> Int {
-        questions.count
-    }
-    
-    func getQuestion(at index: Int) -> Question {
-        questions[index]
-    }
-    
-    func getNextQuestion() -> String {
-        updateIndex()
-        
-        return getCurrentQuestion()
-    }
-    
-    func getCurrentQuestion() -> String {
-        if needsToResetIndex() { resetIndex() }
-        
-        return questions[currentQuestionIndex].question
-    }
-    
-    private func updateIndex() {
-        currentQuestionIndex += 1
-    }
-    
-    private func resetIndex() {
-        currentQuestionIndex = 0
-    }
-    
-    private func needsToResetIndex() -> Bool {
-        currentQuestionIndex >= questions.count
-    }
-    
-    func validateCurrentQuestion(answer: String) -> Bool {
-        if let rightAnswer = questions_?.correct_answer {
-            return rightAnswer == answer
+                
+        func getCurrentQuestion() -> String {
+            if let question = self.currentQuestion {
+                return question.question.htmlDecoded
+            }
+            return "Error getting question"
         }
-        return false
+        
+        func validateCurrentQuestion(answer: String) -> Bool {
+            if let rightAnswer = currentQuestion?.correct_answer {
+                return rightAnswer == answer
+            }
+            return false
+        }
     }
-}
+
+    // Used to decode special characters like '&quot;' from the JSON
+    extension String {
+        var htmlDecoded: String {
+            let decoded = try? NSAttributedString(data: Data(utf8), options: [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+            ], documentAttributes: nil).string
+
+            return decoded ?? self
+        }
+    }
 	

@@ -5,59 +5,62 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
+    
     private var viewModel: QuestionsViewModel!
+    private var currentQuestion: Question?
+    
     var categoryID = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.viewModel = QuestionsViewModel(service: QuestionsService())
+        getQuestion()
+    }
+    
+    private func getQuestion() {
+        viewModel.getQuestion(for: categoryID) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.setCurrentQuestion()
+        }
+    }
 
-     override func viewDidLoad() {
-         viewModel = QuestionsViewModel(service: QuestionsService())
-         getQuestions()
-     }
-    
-    private func getQuestions(){
-        viewModel.getQuestion(for: categoryID){ [weak self] in
-            guard let strongSelf = self else {return}
-            
-            if strongSelf.viewModel.areQuestionsAvailable() {
-                strongSelf.setCurrentQuestion()
-            }
-        }
+    @IBAction func yesButtonTapped(_ sender: UIButton) {
+        let result = validateCurrentQuestion(answer: "True")
+        sendResultAlert(for: result)
     }
     
-    @IBAction func wrongAnswer(_ sender: UIButton){
-        if let result = validateCurrentQuestion(answer: "False"){
-            sendResultMessage(for: result)
-        }
+    @IBAction func noButtonTapped(_ sender: UIButton) {
+        let result = validateCurrentQuestion(answer: "False")
+        sendResultAlert(for: result)
+    }
+     
+    private func setCurrentQuestion() {
+        questionLabel.text = viewModel.getCurrentQuestion()
     }
     
-    @IBAction func rightAnswer(_ sender: UIButton){
-        if let result = validateCurrentQuestion(answer: "true"){
-        sendResultMessage(for: result)
-        }
-    }
-    
-    private func updateQuestion(){
-        setQuestion(question: viewModel.getNextQuestion())
-    }
-    
-    private func setCurrentQuestion(){
-        setQuestion(question: viewModel.getNextQuestion())
-    }
-    
-    private func setQuestion(question: String){
-        questionLabel.text = question
-    }
-    
-    private func validateCurrentQuestion(answer: String) -> Bool? {
+    private func validateCurrentQuestion(answer: String) -> Bool {
         viewModel.validateCurrentQuestion(answer: answer)
     }
-    
-    private func sendResultMessage(for result: Bool){
-        let message = result ? "Respuesta Correcta" : "Respuesta Incorrecta"
         
-        let alert = UIAlertController(title: "Respuesta", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in self.updateQuestion()
-        }))
-        
-        self.present(alert, animated: true)
+    private func sendResultAlert(for result: Bool) {
+        result ? rightAnswerTapped() : wrongAnswerTapped()
     }
+   
+    private func rightAnswerTapped() {
+       let alertYes = UIAlertController(title: "Excellent!", message: "Good Job!😁", preferredStyle: .alert)
+        alertYes.addAction(UIAlertAction(title: "OK", style: .default, handler: { [self] _ in
+            getQuestion()
+        }))
+        self.present(alertYes, animated: true, completion: nil)
+    }
+    
+    private func wrongAnswerTapped() {
+        let alertNO = UIAlertController(title: "Wrong!", message: "Better luck next time 😔", preferredStyle: .alert)
+        alertNO.addAction(UIAlertAction(title: "Ups! 😅", style: .cancel, handler: { [self] _ in
+            getQuestion()
+        }))
+        self.present(alertNO, animated: true)
+    }
+        
 }
+
