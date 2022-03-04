@@ -5,7 +5,7 @@ import Alamofire
 
 class QuestionsService {
 
-    func getQuestion(for category: Int, onComplete: @escaping (Question) -> Void, onError: @escaping () -> Void) {
+    func getQuestion(for category: Int, onComplete: @escaping (Question) -> Void) {
         var questionURL: String
         if category == 0 {
             questionURL = Constants().questionsURL

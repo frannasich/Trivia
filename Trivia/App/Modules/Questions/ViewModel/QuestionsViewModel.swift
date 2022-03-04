@@ -10,7 +10,7 @@ class QuestionsViewModel{
             self.questionsService = service
         }
         
-        func getQuestion(for categoryID: Int, completion: @escaping () -> Void) {
+    func getQuestion(for categoryID: Int, completion: @escaping () -> Void) {
             questionsService.getQuestion(for: categoryID) { [weak self] receivedQuestion in
                 guard let strongSelf = self else { return }
                 strongSelf.currentQuestion = receivedQuestion
