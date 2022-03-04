@@ -20,3 +20,13 @@ dos botones para seleccionar si la afirmación es verdadera o falsa.
 * Patrón de Arquitectura: MVVM
 * API: [**Open Trivia**](https://opentdb.com/ "Open Trivia")
 * IDE: Xcode
+
+## Muestras de Pantallas
+* **Pantalla 1:**
+* ![image](https://user-images.githubusercontent.com/80861248/156804925-506459ba-34ff-4eff-8dd7-f94e809d522a.png)
+* **Pantalla 2:**
+* ![image](https://user-images.githubusercontent.com/80861248/156805095-c71ba531-073e-419d-8dd8-2c42ecf4168d.png)
+* **Pantalla 3:**
+* ![image](https://user-images.githubusercontent.com/80861248/156805286-4a4cbf3c-62da-4705-bba8-e29e62d09195.png)
+* **Pantalla 4:**
+* ![image](https://user-images.githubusercontent.com/80861248/156805448-71cefdb3-1470-49d8-be67-403835d1421e.png)
