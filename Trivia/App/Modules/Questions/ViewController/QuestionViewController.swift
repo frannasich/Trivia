@@ -9,7 +9,7 @@ class QuestionViewController: UIViewController {
     private var viewModel: QuestionsViewModel!
     private var currentQuestion: Question?
     
-    var categoryID = 0
+    var categoryID : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()

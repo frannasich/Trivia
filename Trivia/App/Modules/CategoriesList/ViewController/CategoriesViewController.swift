@@ -8,11 +8,11 @@ protocol CategoriesDelegate {
     func showError()
 }
 
-class CategoriesViewController: UIViewController, UITableViewDelegate {
+class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var service = CategoriesService()
-    private var viewModel: CategoriesViewModel?
+    private var viewModel: CategoriesViewModel!
 
 
     override func viewDidLoad() {
@@ -28,15 +28,6 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
         self.tableView.register(UINib(nibName: "CategoriesListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
     }
-    
-    //func showQuestions(for category: Category){
-        
-    //        let questionViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
-    //        questionViewController.title = category.name
-    //        questionViewController.categoryID = category.id
-                                  
-    //    navigationController?.pushViewController(questionViewController, animated: true)
-
 }
 
 extension CategoriesViewController: CategoriesDelegate{
@@ -54,15 +45,22 @@ extension CategoriesViewController: CategoriesDelegate{
 
 }
 
-//extension CategoriesViewController: UITableViewDelegate {
+extension CategoriesViewController: UITableViewDelegate {
 
-//        func tableView(_ tableview:UITableView, didSelectRowAt indexPath: IndexPath) {
-//            tableView.deselectRow(at: indexPath, animated: true)
-//            if let category = viewModel?.getCategory(at: indexPath.row) {
-//                showQuestions(for: category)
-//            }
-//        }
-//}
+        func tableView(_ tableview:UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+                showQuestions(for: viewModel.getCategory(at: indexPath.row))
+            }
+    
+    private func showQuestions(for category: Category){
+            let questionViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
+            questionViewController.title = category.name
+            questionViewController.categoryID = category.id
+                                  
+        navigationController?.pushViewController(questionViewController, animated: true)
+
+}
+        }
 
 extension CategoriesViewController: UITableViewDataSource {
     
