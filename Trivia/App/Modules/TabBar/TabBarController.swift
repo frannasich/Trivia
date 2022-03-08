@@ -6,6 +6,9 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         setupViewControllers()
     }
     
@@ -26,7 +29,7 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().tintColor = UIColor.red
             
         // Random
-        let secondTabViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
+        let secondTabViewController = QuestionsViewController(nibName: "QuestionViewController", bundle: nil)
             secondTabViewController.title = secondTabTitle
             
         let secondTabNavigationController = UINavigationController(rootViewController: secondTabViewController)

@@ -26,10 +26,10 @@ class CategoriesViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UINib(nibName: "CategoriesListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-
     }
 }
 
+// Categories Delegate
 extension CategoriesViewController: CategoriesDelegate{
     func toogleLoad() {
         print("Cargando")
@@ -45,6 +45,7 @@ extension CategoriesViewController: CategoriesDelegate{
 
 }
 
+// Table View Delegate
 extension CategoriesViewController: UITableViewDelegate {
 
         func tableView(_ tableview:UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,15 +54,15 @@ extension CategoriesViewController: UITableViewDelegate {
             }
     
     private func showQuestions(for category: Category){
-            let questionViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
+            let questionViewController = QuestionsViewController(nibName: "QuestionViewController", bundle: nil)
             questionViewController.title = category.name
             questionViewController.categoryID = category.id
                                   
         navigationController?.pushViewController(questionViewController, animated: true)
-
-}
+            }
         }
 
+// Table View Data Source
 extension CategoriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -2,14 +2,14 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
     private var viewModel: QuestionsViewModel!
     private var currentQuestion: Question?
     
-    var categoryID : Int!
+    var categoryID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +18,19 @@ class QuestionViewController: UIViewController {
     }
     
     private func getQuestion() {
-        viewModel.getQuestion(for: categoryID) { [weak self] in
+        viewModel.getQuestions(for: categoryID) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.setCurrentQuestion()
         }
     }
 
     @IBAction func yesButtonTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: "True")
+        let result = validateCurrentQuestion(answer: true)
         sendResultAlert(for: result)
     }
     
     @IBAction func noButtonTapped(_ sender: UIButton) {
-        let result = validateCurrentQuestion(answer: "False")
+        let result = validateCurrentQuestion(answer: false)
         sendResultAlert(for: result)
     }
      
@@ -38,7 +38,7 @@ class QuestionViewController: UIViewController {
         questionLabel.text = viewModel.getCurrentQuestion()
     }
     
-    private func validateCurrentQuestion(answer: String) -> Bool {
+    private func validateCurrentQuestion(answer: Bool) -> Bool {
         viewModel.validateCurrentQuestion(answer: answer)
     }
         
@@ -47,7 +47,7 @@ class QuestionViewController: UIViewController {
     }
    
     private func rightAnswerTapped() {
-       let alertYes = UIAlertController(title: "Excellent!", message: "Good Job!😁", preferredStyle: .alert)
+       let alertYes = UIAlertController(title: "Great!", message: "Good Job!😁", preferredStyle: .alert)
         alertYes.addAction(UIAlertAction(title: "OK", style: .default, handler: { [self] _ in
             getQuestion()
         }))
@@ -55,8 +55,8 @@ class QuestionViewController: UIViewController {
     }
     
     private func wrongAnswerTapped() {
-        let alertNO = UIAlertController(title: "Wrong!", message: "Better luck next time 😔", preferredStyle: .alert)
-        alertNO.addAction(UIAlertAction(title: "Ups! 😅", style: .cancel, handler: { [self] _ in
+        let alertNO = UIAlertController(title: "Very close!", message: "Good luck next time!😔", preferredStyle: .alert)
+        alertNO.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { [self] _ in
             getQuestion()
         }))
         self.present(alertNO, animated: true)
